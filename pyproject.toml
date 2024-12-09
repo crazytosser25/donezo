@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "donezo"
+version = "0.1.0"
+description = "Task management system on Flask"
+package-mode = false
+authors = ["Yevhenii Baranov <j52b10i78@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+flask = "^3.1.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
