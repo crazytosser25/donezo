@@ -1,6 +1,6 @@
 """Start app"""
 
-from flask import Flask, jsonify
+from flask import Flask, render_template
 
 from app.db import db
 
@@ -15,9 +15,9 @@ with app.app_context():
 
 @app.route("/")
 def home():
-    return jsonify(message="Donezo")
+    return render_template("index.html"), 200
 
 
 @app.errorhandler(404)
 def handle_404(e):
-    return jsonify(error="Page not found."), 404
+    return render_template("404.html", content=e), 404
